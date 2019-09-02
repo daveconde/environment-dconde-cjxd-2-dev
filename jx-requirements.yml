@@ -1,17 +1,22 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
+  clusterName: dconde-cjxd-2
+  environmentGitOwner: daveconde
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: apps-dev-229310
   provider: gke
-  zone: ""
-gitops: true
+  zone: europe-west1-c
 environments:
 - key: dev
 - key: staging
 - key: production
+gitops: true
 ingress:
-  domain: ""
+  domain: 35.195.45.193.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
@@ -21,13 +26,13 @@ secretStorage: vault
 storage:
   logs:
     enabled: true
-    url: ""
+    url: gs://dconde-cjxd-2-logs-9e774f58-d00f-469f-b20b-d9c9229e581f
   reports:
     enabled: true
-    url: ""
+    url: gs://dconde-cjxd-2-logs-9e774f58-d00f-469f-b20b-d9c9229e581f
   repository:
     enabled: true
-    url: ""
+    url: gs://dconde-cjxd-2-logs-9e774f58-d00f-469f-b20b-d9c9229e581f
 versionStream:
   ref: 08f554ad1a5dd4047b3594c020405451feaf5078
   url: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git
